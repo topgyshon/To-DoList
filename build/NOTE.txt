@@ -1,0 +1,18 @@
+// creating a list Element inside the OL
+    let li = document.createElement("li"); 
+
+    // Add a text value to LI Element
+    li.innerText = input.value;  
+
+    // Create a delete button
+    let deleteButton = document.createElement("button");
+
+    // Add text content to Delete button
+    deleteButton.innerText = "Completed";
+
+    li.appendChild
+
+    // Attach LI to Tasklist
+    taskList.appendChild(li) 
+   
+    let editButton = document.createElement("button")
