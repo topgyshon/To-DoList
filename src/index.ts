@@ -14,17 +14,27 @@ sub.addEventListener("click", ()=>{
   }
 });
 
+// function to render HTML template depending on task array
 const displayTask = () => {
   let listHTML: string = ``
 
-  for (let i:number = 0; i < mydoList   .length; i++) {
-   listHTML += `<li> ${mydoList [1]} <br> <button> Edit</button> <button onclick= 'deleteTask(${i})''> Completed</buttton> </li>`;
+  for (let i:number = 0; i < mydoList.length; i++) {
+   listHTML += `<li> ${mydoList [i]} <br> <button onclick='editTask(${i})'> Edit</button> <button onclick= 'deleteTask(${i})'> Completed</buttton> </li>`;
   };
   taskList.innerHTML = listHTML
 }
 
-const deleteTask = (index: number) => {
+// FUNCTION TO DELETE task from ARRAY
+const deleteTask = (index: number): void => {
   mydoList.splice(index, 1); 
   displayTask();
 }
 
+const editTask = (index: number): void => {
+  mydoList.splice(index, 1, input.value)
+  if (input.value.length > 0){
+    mydoList.push(input.value);
+    input.value = '';
+    displayTask();
+  }
+}
