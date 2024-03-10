@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My To Do List</title>
     <script src="../build/index.js" defer></script>
+    <link rel="stylesheet" href="./index.css">
 
 </head>
 <body>
-    <hi> My To Do List</hi>
+    <div class="container">
 
-    <div id="taskInputSection">
-        <input type="text" id="input" placeholder="Enter task" name="name">
-        <button id="sub">Submit</button>
-    </div>
+        <div class="header">
+            <h2> My To Do List</h2>
+        </div>
+
+        <div id="taskInputSection">
+            <input type="text" id="input" placeholder="Enter task" name="name">
+            <button id="sub">Submit</button>
+        </div>
 
         <div id="tasksDiv">
 
@@ -22,5 +27,6 @@
             </ol>
 
         </div>
+    </div>
 </body>
 </html>
